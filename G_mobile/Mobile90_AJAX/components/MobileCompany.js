@@ -1,5 +1,5 @@
 ﻿import React from 'react';
-import {default as isoFetch} from 'isomorphic-fetch';
+import isoFetch from 'isomorphic-fetch';
 
 import MobileClient from './MobileClient';
 
@@ -9,6 +9,13 @@ class MobileCompany extends React.PureComponent {
 
   constructor(props) {
     super(props);
+    // this.loadData();
+    // не надо запускать асинхронные или долгие операции из конструктора
+    // конструктор инициализирует только КЛАСС, это ещё не React-компонент
+    // конструктор должен быть лёгким и быстрым
+  }
+
+  componentDidMount() {
     this.loadData();
   }
 
