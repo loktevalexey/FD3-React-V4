@@ -6,7 +6,11 @@ import ReactDOM from 'react-dom';
 import VotesBlock from './components/VotesBlock';
 
 var questionText='Как вы относитесь к программированию?';
+
 var answersArr=require('./answers.json');
+// или так:
+//import answersArr from './answers.json';
+
 var defaultFreeAnswerText="???";
 
 ReactDOM.render(
